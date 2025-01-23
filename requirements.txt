@@ -1,0 +1,8 @@
+requests
+pandas
+tableauhyperapi
+tableauserverclient
+tabpy
+scikit-learn
+matplotlib
+numpy
