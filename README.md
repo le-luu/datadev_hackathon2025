@@ -11,13 +11,15 @@
 -	Build the dashboard in Tableau Desktop to show the predicted data and compare it with the actual data
   
 ### Challenges:
--	Need to use TabPy to extract data from API and parse JSON by using the Script tool in Tableau Prep Builder. However, we cannot publish the workflow with the Script tool in Tableau Prep Builder to Tableau Cloud.
+-	TabPy is required to extract data from an API and parse JSON using the Script tool in Tableau Prep Builder. However, workflows containing the Script tool in Tableau Prep Builder cannot be published to Tableau Cloud.
  ![image](https://github.com/le-luu/datadev_hackathon2025/blob/main/img/cannot_publish_script_step_on_Tableau_Cloud.png)
 (Source: https://help.tableau.com/current/prep/en-us/prep_scripts_TabPy.htm)
 
--	From that challenge, I cannot schedule the workflow to refresh data on Tableau Cloud. So, need to find a solution to schedule the workflow to run daily.
--	Build a Machine Learning model and apply that model from TabPy to Tableau Desktop.
--	Think of a way to apply the Machine Learning model in Tableau Desktop for everyone who can use it (including users without a Computer Science background).
+-	Due to this limitation, it is not possible to schedule the workflow for data refresh on Tableau Cloud. Therefore, I need to find an alternative solution to schedule the workflow to run daily.
+-	Once the data source is published on Tableau Cloud, downloading it via Tableau Server Client (TSC) and converting the Hyper file or .tdsx file into a DataFrame can be a complex process.
+-	Develop a machine learning model and integrate it into Tableau Desktop via TabPy.
+-	Consider how to make the machine learning model accessible in Tableau Desktop for all users, including those without a Computer Science background.
+
 
 ### List of APIs and Dev Tools
 1. Weather API: https://open-meteo.com/
